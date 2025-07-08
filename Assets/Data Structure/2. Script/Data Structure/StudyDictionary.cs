@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class PersonData
         this.name = name;
         this.height = height;
         this.weight = weight;
+        
     }
 }
 
