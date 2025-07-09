@@ -17,7 +17,6 @@ public class BoardBar : MonoBehaviour
         }
         else // 선택된 상태일 때
         {
-            HanoiTower.isSelected = false;
             PushDonut(HanoiTower.selectedDonut);
         }
     }
@@ -27,6 +26,7 @@ public class BoardBar : MonoBehaviour
         if(barStack.Count > 0)
         {
             int pushNumber = donut.GetComponent<Donut>().donutNumber;
+
             GameObject peekDonut = barStack.Peek();
             int peekNumber = peekDonut.GetComponent<Donut>().donutNumber;
 
@@ -45,9 +45,8 @@ public class BoardBar : MonoBehaviour
     public void PushDonut(GameObject donut)
     {
         if (!CheckDonut(donut))
-        {
             return;
-        }
+        
         
         HanoiTower.isSelected = false;
         HanoiTower.selectedDonut = null;
