@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BoardBar : MonoBehaviour
 {
-    public enum BarType { Left, Center, Right};
+    public enum BarType { Left, Center, Right };
     public BarType barType;
 
     public Stack<GameObject> barStack = new Stack<GameObject>();
@@ -12,7 +12,6 @@ public class BoardBar : MonoBehaviour
     {
         if (!HanoiTower.isSelected)
         {
-            HanoiTower.isSelected = true;
             HanoiTower.selectedDonut = PopDonut();
         }
         else // 선택된 상태일 때
@@ -23,14 +22,14 @@ public class BoardBar : MonoBehaviour
 
     public bool CheckDonut(GameObject donut)
     {
-        if(barStack.Count > 0)
+        if (barStack.Count > 0)
         {
             int pushNumber = donut.GetComponent<Donut>().donutNumber;
 
             GameObject peekDonut = barStack.Peek();
             int peekNumber = peekDonut.GetComponent<Donut>().donutNumber;
 
-            if(pushNumber < peekNumber)
+            if (pushNumber < peekNumber)
             {
                 return true;
             }
@@ -46,8 +45,8 @@ public class BoardBar : MonoBehaviour
     {
         if (!CheckDonut(donut))
             return;
-        
-        
+
+        HanoiTower.moveCount++;
         HanoiTower.isSelected = false;
         HanoiTower.selectedDonut = null;
 
@@ -60,7 +59,13 @@ public class BoardBar : MonoBehaviour
 
     public GameObject PopDonut()
     {
-        GameObject donut = barStack.Pop();
-        return donut;
+        if (barStack.Count > 0)
+        {
+            HanoiTower.currBar = this;
+            HanoiTower.isSelected = true;
+            GameObject donut = barStack.Pop();
+            return donut;
+        }
+        return null;
     }
 }
