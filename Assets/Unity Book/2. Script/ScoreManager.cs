@@ -13,18 +13,18 @@ public class ScoreManager : MonoBehaviour
     {
         bestScore = PlayerPrefs.GetInt("BestScore", 0);
 
-        bestScoreUI.text = "최고 점수 : " + bestScore;
+        bestScoreUI.text = "Best Score : " + bestScore;
     }
 
     public void SetScore(int value)
     {
         currentScore = value;
-        currentScoreUI.text = "현재 점수 : " + currentScore;
+        currentScoreUI.text = "Score : " + currentScore;
 
         if (currentScore > bestScore)
         {
             bestScore = currentScore;
-            bestScoreUI.text = "최고 점수 : " + bestScore;
+            bestScoreUI.text = "Best Score : " + bestScore;
 
             PlayerPrefs.SetInt("BestScore", bestScore);
         }
