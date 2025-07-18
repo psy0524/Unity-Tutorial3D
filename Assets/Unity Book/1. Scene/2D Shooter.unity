@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 0}
   firePosition: {fileID: 1521161688}
+  poolSize: 10
+  bulletObjectPool: []
 --- !u!114 &16634471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,28 +453,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 231689977}
-  - component: {fileID: 231689976}
   m_Layer: 0
-  m_Name: Enemy Manager(4)
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &231689976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231689975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba01cec8c3977e4896c1522c8c08e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createTime: 1
-  enemyFactory: {fileID: 7390091038566501190, guid: 46f8740d09c7ca345834d5314716c6ff, type: 3}
 --- !u!4 &231689977
 Transform:
   m_ObjectHideFlags: 0
@@ -482,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 231689975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0973973, y: 4.5912776, z: 2.48267}
+  m_LocalPosition: {x: 5.88, y: 4.5912776, z: 2.48267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -497,28 +484,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 318940144}
-  - component: {fileID: 318940143}
   m_Layer: 0
-  m_Name: Enemy Manager(3)
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &318940143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318940142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba01cec8c3977e4896c1522c8c08e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createTime: 1
-  enemyFactory: {fileID: 7390091038566501190, guid: 46f8740d09c7ca345834d5314716c6ff, type: 3}
 --- !u!4 &318940144
 Transform:
   m_ObjectHideFlags: 0
@@ -528,7 +500,7 @@ Transform:
   m_GameObject: {fileID: 318940142}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5973973, y: 4.5912776, z: 2.48267}
+  m_LocalPosition: {x: 4.8, y: 4.5912776, z: 2.48267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,28 +839,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 799815633}
-  - component: {fileID: 799815632}
   m_Layer: 0
-  m_Name: Enemy Manager(5)
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &799815632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799815631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba01cec8c3977e4896c1522c8c08e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createTime: 1
-  enemyFactory: {fileID: 7390091038566501190, guid: 46f8740d09c7ca345834d5314716c6ff, type: 3}
 --- !u!4 &799815633
 Transform:
   m_ObjectHideFlags: 0
@@ -898,7 +855,7 @@ Transform:
   m_GameObject: {fileID: 799815631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.597397, y: 4.5912776, z: 2.48267}
+  m_LocalPosition: {x: 3.5700002, y: 4.5912776, z: 2.48267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -913,28 +870,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1009687052}
-  - component: {fileID: 1009687051}
   m_Layer: 0
-  m_Name: Enemy Manager(2)
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1009687051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009687050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba01cec8c3977e4896c1522c8c08e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createTime: 1
-  enemyFactory: {fileID: 7390091038566501190, guid: 46f8740d09c7ca345834d5314716c6ff, type: 3}
 --- !u!4 &1009687052
 Transform:
   m_ObjectHideFlags: 0
@@ -944,11 +886,65 @@ Transform:
   m_GameObject: {fileID: 1009687050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09739733, y: 4.5912776, z: 2.48267}
+  m_LocalPosition: {x: 2.44, y: 4.5912776, z: 2.48267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1788161506}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1066213088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066213090}
+  - component: {fileID: 1066213089}
+  m_Layer: 0
+  m_Name: Enemy Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1066213089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066213088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba01cec8c3977e4896c1522c8c08e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 10
+  enemyObjectPool: []
+  SpawnPoints:
+  - {fileID: 1312394966}
+  - {fileID: 1009687052}
+  - {fileID: 318940144}
+  - {fileID: 231689977}
+  - {fileID: 799815633}
+  createTime: 1
+  enemyFactory: {fileID: 7390091038566501190, guid: 46f8740d09c7ca345834d5314716c6ff, type: 3}
+--- !u!4 &1066213090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066213088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.28931877, y: 4.6758204, z: -25.014206}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108728819
 GameObject:
@@ -1336,28 +1332,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1312394966}
-  - component: {fileID: 1312394965}
   m_Layer: 0
-  m_Name: Enemy Manager
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1312394965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312394964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba01cec8c3977e4896c1522c8c08e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createTime: 1
-  enemyFactory: {fileID: 7390091038566501190, guid: 46f8740d09c7ca345834d5314716c6ff, type: 3}
 --- !u!4 &1312394966
 Transform:
   m_ObjectHideFlags: 0
@@ -1367,7 +1348,7 @@ Transform:
   m_GameObject: {fileID: 1312394964}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4026027, y: 4.5912776, z: 2.48267}
+  m_LocalPosition: {x: 1.24, y: 4.5912776, z: 2.48267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1851,7 +1832,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.064
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1957,7 +1938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788161506}
   m_Layer: 0
-  m_Name: EnemyManager
+  m_Name: Spawn Point Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2253,3 +2234,4 @@ SceneRoots:
   - {fileID: 1391027093}
   - {fileID: 1254463668}
   - {fileID: 339840685}
+  - {fileID: 1066213090}
