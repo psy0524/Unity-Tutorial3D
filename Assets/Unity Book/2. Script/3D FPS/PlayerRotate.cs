@@ -1,0 +1,17 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerRotate : MonoBehaviour
+{
+    public float rotSpeed = 200f;
+
+    public float mx = 0;
+
+    private void Update()
+    {
+        float mouse_X = Input.GetAxis("Mouse X");
+
+        transform.eulerAngles = new Vector3(0, mx, 0);
+    }
+    
+}
