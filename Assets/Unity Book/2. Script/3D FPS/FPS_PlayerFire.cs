@@ -6,6 +6,8 @@ public class FPS_PlayerFire : MonoBehaviour
 
     public GameObject bombFactory;
 
+    private Animator anim;
+
     public float throwPower = 15f;
     public int weaponPower = 5;
 
@@ -15,6 +17,7 @@ public class FPS_PlayerFire : MonoBehaviour
     private void Start()
     {
         ps = bulletEffect.GetComponent<ParticleSystem>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -25,6 +28,10 @@ public class FPS_PlayerFire : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 클릭
         {
+            if(anim.GetFloat("MoveMotion") == 0)
+            {
+                anim.SetTrigger("Attack");
+            }
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
             RaycastHit hitInfo = new RaycastHit();
 

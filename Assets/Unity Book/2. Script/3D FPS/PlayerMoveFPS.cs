@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerMoveFPS : MonoBehaviour
 {
     private CharacterController cc;
+    private Animator anim;
     
     public float moveSpeed = 7f;
 
@@ -24,6 +25,7 @@ public class PlayerMoveFPS : MonoBehaviour
     private void Start()
     {
         cc = GetComponent<CharacterController>(); 
+        anim = GetComponentInChildren<Animator>(); 
     }
 
     private void Update()
@@ -37,6 +39,8 @@ public class PlayerMoveFPS : MonoBehaviour
 
         Vector3 dir = new Vector3(h, 0, v);
         dir = dir.normalized;
+
+        anim.SetFloat("MoveMotion", dir.magnitude);
 
         dir = Camera.main.transform.TransformDirection(dir);
 

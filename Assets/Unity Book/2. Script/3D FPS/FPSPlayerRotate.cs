@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class FPSPlayerRotate : MonoBehaviour
 {
@@ -15,7 +14,9 @@ public class FPSPlayerRotate : MonoBehaviour
         }
         float mouse_X = Input.GetAxis("Mouse X");
 
-        transform.eulerAngles = new Vector3(0, mx, 0);
+        mx += mouse_X * rotSpeed * Time.deltaTime;
+
+        transform.eulerAngles = new Vector3(0, mx, 0);  
     }
     
 }
