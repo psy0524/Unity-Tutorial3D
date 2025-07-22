@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerRotate : MonoBehaviour
+public class FPSPlayerRotate : MonoBehaviour
 {
     public float rotSpeed = 200f;
 
@@ -9,6 +9,10 @@ public class PlayerRotate : MonoBehaviour
 
     private void Update()
     {
+        if (FPSGameManager.Instance.gState != FPSGameManager.GameState.Run)
+        {
+            return;
+        }
         float mouse_X = Input.GetAxis("Mouse X");
 
         transform.eulerAngles = new Vector3(0, mx, 0);

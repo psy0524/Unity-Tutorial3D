@@ -7,6 +7,7 @@ public class FPS_PlayerFire : MonoBehaviour
     public GameObject bombFactory;
 
     public float throwPower = 15f;
+    public int weaponPower = 5;
 
     public GameObject bulletEffect;
     public ParticleSystem ps;
@@ -18,6 +19,10 @@ public class FPS_PlayerFire : MonoBehaviour
 
     private void Update()
     {
+        if (FPSGameManager.Instance.gState != FPSGameManager.GameState.Run)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 클릭
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
@@ -25,10 +30,19 @@ public class FPS_PlayerFire : MonoBehaviour
 
             if(Physics.Raycast(ray, out hitInfo))
             {
-                bulletEffect.transform.position = hitInfo.point;
-                bulletEffect.transform.forward = hitInfo.normal;
+                if(hitInfo.transform.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                {
+                    EnemyFSM eFSM = hitInfo.transform.gameObject.GetComponent<EnemyFSM>();
+                    eFSM.HitEnemy(weaponPower);
+                }
+                else
+                {
+                    bulletEffect.transform.position = hitInfo.point;
+                    bulletEffect.transform.forward = hitInfo.normal;
 
-                ps.Play();
+                    ps.Play();
+                }
+
             }
         }
         
