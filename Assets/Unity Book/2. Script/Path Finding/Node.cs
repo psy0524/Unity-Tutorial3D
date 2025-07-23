@@ -6,8 +6,8 @@ public class Node : IComparable<Node>
     public Node parent;
     public Vector3 pos;
 
-    public float nodeTotalCost; // G°ª
-    public float estimateCost; // H°ª
+    public float nodeTotalCost; // G
+    public float estimateCost; // H
 
     public bool isObstacle;
 
@@ -33,6 +33,7 @@ public class Node : IComparable<Node>
         isObstacle = true;
     }
 
+    // F = G + H
     public float GetFCost()
     {
         return nodeTotalCost + estimateCost;
@@ -46,15 +47,11 @@ public class Node : IComparable<Node>
         if (myF < otherF) return -1;
         if (myF > otherF) return 1;
 
-        if(estimateCost < node.estimateCost)
-        {
+        if (estimateCost < node.estimateCost)
             return -1;
-
-        }
         if (estimateCost > node.estimateCost)
-        {
             return 1;
-        }
+
         return 0;
     }
 }
