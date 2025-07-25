@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Data Structure/1. Scene/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Unity Book/1. Scene/Loading Scene.unity
+    guid: 682e405e8932bc547a058f5d0628b461
+  - enabled: 1
+    path: Assets/Unity Book/1. Scene/3D FPS Shooter.unity
+    guid: c8b7e5e4dd2e9ac4691b3bec61814174
+  - enabled: 0
+    path: Assets/Unity Book/1. Scene/MainScene.unity
+    guid: e8633580c033d4a45aa96ed7bdee37e7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
