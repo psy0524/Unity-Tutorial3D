@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectPoolController : MonoBehaviour
+public class ObjectPool : MonoBehaviour
 {
     public ObjectPoolQueue pool;
     public Transform shootPos;
