@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,13 +8,17 @@ namespace Farm
     public class PlayerController : MonoBehaviour
     {
         private Animator anim;
-        private PlayerInput playerInput;
-
+        //private PlayerInput playerInput;
+        
         private CharacterController cc;
         private Vector3 moveInput;
 
-        private float moveSpeed = 2f;
+        private float walkSpeed = 2f;
+        private float runSpeed = 5f;
+        private float currentSpeed;
         private float turnSpeed = 10f;
+
+        private bool isRun;
 
 
         private void Start()
@@ -24,9 +29,10 @@ namespace Farm
 
         private void Update()
         {
-            cc.Move(moveInput * moveSpeed * Time.deltaTime);
+            cc.Move(moveInput * currentSpeed * Time.deltaTime);
 
             Turn();
+            SetAnimation();
         }
 
         private void OnMove(InputValue value)
@@ -43,6 +49,27 @@ namespace Farm
 
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, turnSpeed * Time.deltaTime);
             }
+        }
+
+        private void OnRun(InputValue value)
+        {
+            isRun = value.isPressed;
+        }
+
+        private void SetAnimation()
+        {
+            
+            float targetValue = 0f;
+
+            if(moveInput != Vector3.zero)
+            {
+                targetValue = isRun ? 1f : 0.5f;
+                currentSpeed = isRun ? runSpeed : walkSpeed;
+            }
+            float animValue = anim.GetFloat("Move");
+            animValue = Mathf.Lerp(animValue, targetValue, 10f * Time.deltaTime);
+
+            anim.SetFloat("Move", animValue);
         }
     }
 }
