@@ -9,8 +9,7 @@ public class FieldEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            clearShot.ChildCameras[0].Priority = 1;
-            clearShot.ChildCameras[1].Priority = 10;
+            GameManager.Instance.SetCameraState(CameraState.Plantation);
         }       
     }
 
@@ -18,8 +17,7 @@ public class FieldEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            clearShot.ChildCameras[0].Priority = 10;
-            clearShot.ChildCameras[1].Priority = 1;
+            GameManager.Instance.SetCameraState(CameraState.Outside);
         }
     }
 }
