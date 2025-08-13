@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010095355520}
   - component: {fileID: 33000012079986258}
+  - component: {fileID: -340133510042082127}
   m_Layer: 0
   m_Name: Turnip_Plant
   m_TagString: Untagged
@@ -44,6 +45,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013410243764}
   m_Mesh: {fileID: 4300024, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
+--- !u!114 &-340133510042082127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013410243764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5203814ef24cc4493bd2ea0df4821e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHarvest: 0
 --- !u!1 &911180932729599083
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +178,6 @@ GameObject:
   - component: {fileID: 1349207477172748233}
   - component: {fileID: 1351732609768274547}
   - component: {fileID: 1362016265741703513}
-  - component: {fileID: 1320737062552854819}
   m_Layer: 0
   m_Name: Turnip_Plant
   m_TagString: Untagged
@@ -240,28 +253,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1320737062552854819
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347950065751647447}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300020, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!1 &1420912329165272177
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7854319891398793895}
+  - {fileID: 3273111854989059103}
   m_Father: {fileID: 4000010095355520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &400894210367555851
@@ -464,7 +456,6 @@ GameObject:
   - component: {fileID: 7854319891398793895}
   - component: {fileID: 7888950832076420613}
   - component: {fileID: 7881200176448304877}
-  - component: {fileID: 7921070892007469625}
   m_Layer: 0
   m_Name: Turnip_Fruit
   m_TagString: Untagged
@@ -540,25 +531,77 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7921070892007469625
-MeshCollider:
+--- !u!1001 &2403188562449640573
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3372710431351902095}
+    m_Modifications:
+    - target: {fileID: 133741435961445342, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953481835014384724, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Name
+      value: Alarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 953481835014384724, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453600238101776658, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+--- !u!4 &3273111854989059103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+  m_PrefabInstance: {fileID: 2403188562449640573}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7858110852813315345}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300018, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}

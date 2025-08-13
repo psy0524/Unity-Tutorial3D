@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010095355520}
   - component: {fileID: 33000012079986258}
+  - component: {fileID: 8557927265929971543}
   m_Layer: 0
   m_Name: Corn_Plant
   m_TagString: Untagged
@@ -44,6 +45,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013410243764}
   m_Mesh: {fileID: 4300024, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
+--- !u!114 &8557927265929971543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013410243764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5203814ef24cc4493bd2ea0df4821e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHarvest: 0
 --- !u!1 &292818938380634080
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +69,6 @@ GameObject:
   - component: {fileID: 8612925266439924516}
   - component: {fileID: 98908630569493356}
   - component: {fileID: 5986762929644726823}
-  - component: {fileID: 3887027993727594828}
   m_Layer: 0
   m_Name: Corn_Level 3
   m_TagString: Untagged
@@ -77,6 +90,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1272949399948465390}
+  - {fileID: 1066317249426014039}
   m_Father: {fileID: 4000010095355520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &98908630569493356
@@ -132,28 +146,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3887027993727594828
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292818938380634080}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300024, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!1 &1272219345102324272
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +157,6 @@ GameObject:
   - component: {fileID: 1272949399948465390}
   - component: {fileID: 1283917407844147368}
   - component: {fileID: 1294203400681472740}
-  - component: {fileID: 1244971425442398608}
   m_Layer: 0
   m_Name: Corn_Plant
   m_TagString: Untagged
@@ -241,28 +232,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1244971425442398608
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272219345102324272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300012, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!1 &4713088781225903545
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +243,6 @@ GameObject:
   - component: {fileID: 6976547147120215906}
   - component: {fileID: 4412546382712667421}
   - component: {fileID: 2115771925814364421}
-  - component: {fileID: 1590073608764619087}
   m_Layer: 0
   m_Name: Corn_Level 2
   m_TagString: Untagged
@@ -351,28 +319,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1590073608764619087
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4713088781225903545}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300024, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!1 &6355757317177825071
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +330,6 @@ GameObject:
   - component: {fileID: 6357279370846175729}
   - component: {fileID: 6359820788047066551}
   - component: {fileID: 6369801233447114747}
-  - component: {fileID: 6401019910218880143}
   m_Layer: 0
   m_Name: Corn_Plant
   m_TagString: Untagged
@@ -460,28 +405,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6401019910218880143
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6355757317177825071}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300012, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!1 &6918084884045793632
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +416,6 @@ GameObject:
   - component: {fileID: 7537749484372075188}
   - component: {fileID: 5351386989847885244}
   - component: {fileID: 8797264018512986359}
-  - component: {fileID: 525816877143981225}
   m_Layer: 0
   m_Name: Corn_Level 1
   m_TagString: Untagged
@@ -569,28 +491,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &525816877143981225
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6918084884045793632}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300024, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
 --- !u!1 &7420510916512439141
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,3 +600,89 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: b69b26c8b73b8bd49bf243bbe541a2e0, type: 3}
+--- !u!1001 &214461133061437237
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8612925266439924516}
+    m_Modifications:
+    - target: {fileID: 133741435961445342, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.72004604
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.72004604
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.72004604
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.800307
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.004800307
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953481835014384724, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Name
+      value: Alarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 953481835014384724, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453600238101776658, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+--- !u!4 &1066317249426014039 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 879814499176646754, guid: 3f5269e5250762042b3895b98b8fa643, type: 3}
+  m_PrefabInstance: {fileID: 214461133061437237}
+  m_PrefabAsset: {fileID: 0}
