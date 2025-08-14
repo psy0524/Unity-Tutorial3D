@@ -1978,6 +1978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Image] Fade'
       objectReference: {fileID: 0}
+    - target: {fileID: 2720784600720990731, guid: e076d4abed03a1b4082e792c1f1590f0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7546925071895176611, guid: e076d4abed03a1b4082e792c1f1590f0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

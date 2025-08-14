@@ -13,9 +13,9 @@ namespace Farm
         private CharacterController cc;
         private Vector3 moveInput;
 
+        private float currentSpeed;
         private float walkSpeed = 2f;
         private float runSpeed = 5f;
-        private float currentSpeed;
         private float turnSpeed = 10f;
 
         private Vector3 velocity;
@@ -23,10 +23,13 @@ namespace Farm
 
         private bool isRun;
 
-
-        private void Start()
+        private void Awake()
         {
-            anim = GetComponent<Animator>();
+            int characterIndex = LoadSceneManager.Instance.characterIndex;
+
+            transform.GetChild(characterIndex).gameObject.SetActive(true);
+            anim = transform.GetChild(characterIndex).GetComponent<Animator>();
+
             cc = GetComponent<CharacterController>();
         }
 
